@@ -1,0 +1,322 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f9f7f1;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.poem-container {
+    position: relative;
+    height: 802px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* padding: 20px; */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: url('true.jpeg') no-repeat;
+    background-size: 150%;
+    background-position: center;
+    width: 1238px;
+    color: rgba(0, 0, 0, 1);
+    margin: 0 auto;
+}
+
+.word {
+    position: absolute;
+    cursor: ew-resize; /* Horizontal resize cursor */
+    user-select: none;
+}
+
+.word.selected {
+    outline: 2px solid blue;
+}
+
+.highlighted {
+    background-color: #ff474c;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #4c4c4c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.prompt-box {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.reflection {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 100px;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 1000;
+}
+
+/* Specific styles for the Mallarmé text */
+.cetait {
+    font-size: 18px;
+    left: 510px;
+    top: 65px;
+}
+
+.titre-italique {
+    font-size: 10px;
+    font-style: italic;
+    left: 548px;
+    top: 85px;
+}
+
+.le-nombre {
+    font-size: 18px;
+    left: 850px;
+    top: 65px;
+    text-align: right;
+}
+
+.existat-il {
+    font-size: 16px;
+    left: 800px;
+    top: 120px;
+    text-align: right;
+}
+
+.autrement {
+    font-size: 10px;
+    font-style: italic;
+    left: 700px;
+    top: 137px;
+    text-align: left;
+}
+
+.commencat-il {
+    font-size: 16px;
+    left: 770px;
+    top: 175px;
+    text-align: right;
+}
+
+.soufflant {
+    font-size: 10px;
+    font-style: italic;
+    left: 700px;
+    top: 192px;
+    text-align: left;
+}
+
+.par-quelque {
+    font-size: 10px;
+    font-style: italic;
+    left: 700px;
+    top: 209px;
+    text-align: left;
+}
+
+.se-chiffrat-il {
+    font-size: 16px;
+    left: 800px;
+    top: 238px;
+    text-align: right;
+}
+
+.evidence {
+    font-size: 10px;
+    font-style: italic;
+    left: 700px;
+    top: 280px;
+    text-align: right;
+}
+
+.illuminat-il {
+    font-size: 16px;
+    left: 800px;
+    top: 305px;
+    text-align: right;
+}
+
+.ce-serait {
+    font-size: 18px;
+    left: 130px;
+    top: 417px;
+}
+
+.pire {
+    font-size: 10px;
+    font-style: italic;
+    left: 210px;
+    top: 430px;
+}
+
+.non {
+    font-size: 10px;
+    font-style: italic;
+    left: 245px;
+    top: 450px;
+}
+
+.davantage {
+    font-size: 10px;
+    font-style: italic;
+    left: 230px;
+    top: 470px;
+}
+
+.indifferemment {
+    font-size: 10px;
+    font-style: italic;
+    left: 460px;
+    top: 483px;
+}
+
+.le-hasard {
+    font-size: 32px;
+    /* font-weight: bold; */
+    left: 750px;
+    top: 470px;
+    text-align: center;
+}
+
+/* Lower section of the poem */
+.choit {
+    font-size: 10px;
+    font-style: italic;
+    left: 750px;
+    top: 600px;
+    text-align: center;
+}
+
+.la-plume {
+    font-size: 10px;
+    font-style: italic;
+    left: 750px;
+    top: 620px;
+    text-align: center;
+}
+
+.rythmique {
+    font-size: 10px;
+    font-style: italic;
+    left: 750px;
+    top: 640px;
+    text-align: center;
+}
+
+.ensevelir {
+    font-size: 10px;
+    font-style: italic;
+    left: 750px;
+    top: 660px;
+    text-align: center;
+}
+
+.aux-ecumes {
+    font-size: 10px;
+    font-style: italic;
+    left: 750px;
+    top: 680px;
+    text-align: center; 
+}
+
+.nagueres {
+    font-size: 10px;
+    font-style: italic;
+    left: 750px;
+    top: 700px;
+    text-align: center;
+}
+
+.fletrie {
+    font-size: 10px;
+    font-style: italic;
+    left: 750px;
+    top: 720px;
+    text-align: center;
+}
+
+.par-la-neutralite {
+    font-size: 10px;
+    font-style: italic;
+    left: 750px;
+    top: 740px;
+    text-align: center;
+}
+
+/* For saved layouts */
+.saved-layout {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.saved-layout button {
+    margin-top: 10px;
+    background-color: #6a6a6a;
+    font-size: 12px;
+    padding: 5px 8px;
+}
+
+.panel {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.line-marker {
+    position: absolute;
+    border-top: 1px dashed #ccc;
+    width: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
